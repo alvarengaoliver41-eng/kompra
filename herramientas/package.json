@@ -1,0 +1,8 @@
+{
+  "name": "kompra-herramientas",
+  "private": true,
+  "dependencies": {
+    "@fontsource/unbounded": "^5.0.0",
+    "@fontsource/instrument-sans": "^5.0.0"
+  }
+}

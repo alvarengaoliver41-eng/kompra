@@ -1,0 +1,6 @@
+fonttools
+brotli
+uharfbuzz
+cairosvg
+Pillow
+pypdf

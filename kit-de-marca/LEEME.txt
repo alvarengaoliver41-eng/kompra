@@ -1,0 +1,33 @@
+KOMPRÁ · KIT DE MARCA
+Komprá de todo, en un solo lugar.
+
+Empezá por el "Manual de marca Komprá.pdf": ahí está cómo usar todo.
+
+01 Logo
+   SVG  → para imprenta, cartelería y la web (se agranda sin perder calidad).
+   PNG  → con fondo transparente, para Canva, Word, presentaciones y redes.
+   - principal ............ letras verde Yerba, tilde rosa Lapacho (fondos claros)
+   - fondo-oscuro ......... letras Hueso, tilde verde Tereré (fondos oscuros)
+   - una-tinta-yerba ...... todo en un solo color
+   - negro / blanco ....... para sellos, bordados, impresión en blanco y negro o sobre fotos
+   - con-eslogan .......... logo + "Komprá de todo, en un solo lugar."
+
+02 Isotipo
+   La k con su tilde, en tres colores y sin fondo.
+   Favicon → los íconos para la pestaña del navegador y el celular (web y tienda online).
+
+03 Redes
+   - perfil-instagram-facebook-whatsapp-1080.png → foto de perfil (la misma en las tres)
+   - portada-facebook-1640x624.png → portada de la página de Facebook
+   - destacadas → portadas para las historias destacadas de Instagram
+       Cómo komprar · Envíos · Novedades · Opiniones · Ofertas
+   - plantillas → fondos de post y story, más un ejemplo de cada uno
+
+04 Colores
+   Paleta con códigos HEX (web), RGB (pantalla) y CMYK (imprenta).
+
+05 Tipografías
+   Unbounded y Instrument Sans, gratis y de uso comercial libre. Instrucciones en su LEEME.
+
+Regla de oro: el logo nunca se escribe con la fuente.
+La tilde del logo está dibujada a medida; usá siempre los archivos de la carpeta 01 Logo.

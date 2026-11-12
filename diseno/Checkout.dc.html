@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Komprá — Checkout</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800;900&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0E2A1F}a:hover{color:#0E2A1F}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</helmet>
+<div style="width: 390px; min-height: 1760px; box-sizing: border-box; background: #F6F1E7; font-family: 'Instrument Sans', system-ui, sans-serif; color: #0E2A1F">
+
+<sc-if value="{{isForm}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; flex-direction: column">
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 18px 20px">
+<a href="Producto.dc.html" aria-label="Volver" style="width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg>
+</a>
+<span class="sr">Komprá</span>
+<svg aria-hidden="true" width="124.5" height="30.6" viewBox="0 -1008 4789 1178" style="display: block; flex: none"><path d="M281.0 -180.0 219.0 -201.0 521.0 -573.0H757.0L256.0 0.0H52.0V-770.0H281.0ZM358.0 -278.0 533.0 -395.0 772.0 0.0H516.0ZM1090.0 17.0Q979.0 17.0 895.0 -21.0Q811.0 -59.0 764.0 -127.5Q717.0 -196.0 717.0 -286.0Q717.0 -378.0 764.0 -446.5Q811.0 -515.0 895.0 -552.5Q979.0 -590.0 1091.0 -590.0Q1202.0 -590.0 1286.0 -552.5Q1370.0 -515.0 1416.5 -446.5Q1463.0 -378.0 1463.0 -286.0Q1463.0 -196.0 1416.5 -127.5Q1370.0 -59.0 1286.0 -21.0Q1202.0 17.0 1090.0 17.0ZM1091.0 -151.0Q1136.0 -151.0 1167.5 -167.0Q1199.0 -183.0 1215.5 -213.5Q1232.0 -244.0 1232.0 -286.0Q1232.0 -329.0 1215.5 -359.5Q1199.0 -390.0 1167.5 -406.0Q1136.0 -422.0 1091.0 -422.0Q1046.0 -422.0 1014.0 -406.0Q982.0 -390.0 965.5 -359.5Q949.0 -329.0 949.0 -287.0Q949.0 -244.0 965.5 -213.5Q982.0 -183.0 1014.0 -167.0Q1046.0 -151.0 1091.0 -151.0ZM1476.0 -573.0H1705.0L1744.0 -336.0V0.0H1515.0V-371.0ZM1937.0 -590.0Q2017.0 -590.0 2073.0 -557.0Q2129.0 -524.0 2158.5 -463.5Q2188.0 -403.0 2188.0 -322.0V0.0H1959.0V-289.0Q1959.0 -345.0 1932.5 -375.0Q1906.0 -405.0 1857.0 -405.0Q1822.0 -405.0 1796.5 -389.0Q1771.0 -373.0 1757.5 -344.0Q1744.0 -315.0 1744.0 -274.0L1675.0 -310.0Q1688.0 -403.0 1725.5 -465.0Q1763.0 -527.0 1818.0 -558.5Q1873.0 -590.0 1937.0 -590.0ZM2380.0 -590.0Q2460.0 -590.0 2516.5 -557.0Q2573.0 -524.0 2602.5 -463.5Q2632.0 -403.0 2632.0 -322.0V0.0H2403.0V-289.0Q2403.0 -345.0 2376.5 -375.0Q2350.0 -405.0 2301.0 -405.0Q2266.0 -405.0 2240.5 -389.0Q2215.0 -373.0 2201.5 -344.0Q2188.0 -315.0 2188.0 -274.0L2119.0 -310.0Q2132.0 -403.0 2169.5 -465.0Q2207.0 -527.0 2261.5 -558.5Q2316.0 -590.0 2380.0 -590.0ZM2694.0 -573.0H2923.0V-420.0L2914.0 -394.0V-219.0L2923.0 -168.0V165.0H2694.0ZM2853.0 -286.0Q2865.0 -379.0 2905.5 -447.5Q2946.0 -516.0 3010.0 -553.0Q3074.0 -590.0 3155.0 -590.0Q3239.0 -590.0 3302.5 -552.5Q3366.0 -515.0 3401.5 -446.5Q3437.0 -378.0 3437.0 -286.0Q3437.0 -196.0 3401.5 -127.5Q3366.0 -59.0 3302.5 -21.0Q3239.0 17.0 3155.0 17.0Q3073.0 17.0 3009.5 -20.5Q2946.0 -58.0 2906.0 -126.5Q2866.0 -195.0 2853.0 -286.0ZM3206.0 -286.0Q3206.0 -324.0 3190.5 -353.5Q3175.0 -383.0 3147.0 -400.0Q3119.0 -417.0 3083.0 -417.0Q3046.0 -417.0 3012.0 -400.0Q2978.0 -383.0 2952.5 -353.5Q2927.0 -324.0 2915.0 -286.0Q2927.0 -248.0 2952.5 -219.0Q2978.0 -190.0 3012.0 -173.0Q3046.0 -156.0 3083.0 -156.0Q3119.0 -156.0 3147.0 -173.0Q3175.0 -190.0 3190.5 -219.0Q3206.0 -248.0 3206.0 -286.0ZM3452.0 -573.0H3686.0L3720.0 -370.0V0.0H3491.0V-377.0ZM3981.0 -584.0V-389.0Q3949.0 -395.0 3922.5 -397.5Q3896.0 -400.0 3874.0 -400.0Q3833.0 -400.0 3798.0 -384.5Q3763.0 -369.0 3741.5 -331.5Q3720.0 -294.0 3720.0 -228.0L3678.0 -280.0Q3687.0 -342.0 3702.5 -397.5Q3718.0 -453.0 3745.0 -496.5Q3772.0 -540.0 3812.5 -565.0Q3853.0 -590.0 3912.0 -590.0Q3928.0 -590.0 3945.0 -588.5Q3962.0 -587.0 3981.0 -584.0ZM4513.0 0.0 4486.0 -204.0 4514.0 -286.0 4486.0 -367.0 4513.0 -573.0H4751.0L4713.0 -287.0L4751.0 0.0ZM4564.0 -286.0Q4552.0 -195.0 4511.5 -126.5Q4471.0 -58.0 4407.5 -20.5Q4344.0 17.0 4262.0 17.0Q4179.0 17.0 4115.0 -21.0Q4051.0 -59.0 4015.5 -127.5Q3980.0 -196.0 3980.0 -286.0Q3980.0 -378.0 4015.5 -446.5Q4051.0 -515.0 4115.0 -552.5Q4179.0 -590.0 4262.0 -590.0Q4344.0 -590.0 4407.5 -553.0Q4471.0 -516.0 4512.0 -447.5Q4553.0 -379.0 4564.0 -286.0ZM4211.0 -286.0Q4211.0 -248.0 4226.5 -219.0Q4242.0 -190.0 4270.0 -173.0Q4298.0 -156.0 4334.0 -156.0Q4371.0 -156.0 4405.0 -173.0Q4439.0 -190.0 4465.0 -219.0Q4491.0 -248.0 4503.0 -286.0Q4491.0 -324.0 4465.0 -353.5Q4439.0 -383.0 4405.0 -400.0Q4371.0 -417.0 4334.0 -417.0Q4298.0 -417.0 4270.0 -400.0Q4242.0 -383.0 4226.5 -353.5Q4211.0 -324.0 4211.0 -286.0Z" fill="currentColor"></path><path d="M4394.9,-674.3 L4557.5,-836.9 A100.0,100.0 0 0 0 4416.1,-978.3 L4253.5,-815.7 A100.0,100.0 0 0 0 4394.9,-674.3 Z" fill="#FF5FA2"></path></svg>
+<span style="width: 44px"></span>
+</header>
+
+<div style="padding: 4px 20px 32px; display: flex; flex-direction: column; gap: 20px">
+<h1 style="margin: 0; font-family: Unbounded, sans-serif; font-weight: 800; font-size: 30px; line-height: 1.05; letter-spacing: -1.5px">Ya casi es tuyo</h1>
+
+<section aria-label="Tu pedido" style="background: #FFFFFF; border-radius: 24px; padding: 16px; display: flex; flex-direction: column; gap: 14px">
+<sc-for list="{{items}}" as="it" hint-placeholder-count="2">
+<div style="display: flex; gap: 12px; align-items: center">
+<span style="width: 64px; height: 64px; flex: none; border-radius: 16px; background: #ECE5D5"></span>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 2px">
+<strong style="font-size: 15px; line-height: 1.3">{{it.name}}</strong>
+<span style="font-size: 13px; color: #4E5F57">Cantidad: 1</span>
+</div>
+<span style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 14px">Gs. {{it.price}}</span>
+</div>
+</sc-for>
+<div style="border-top: 1px dashed #CFC6B5; padding-top: 12px; display: flex; flex-direction: column; gap: 6px; font-size: 14px">
+<div style="display: flex; justify-content: space-between"><span style="color: #4E5F57">Productos</span><span>Gs. 485.000</span></div>
+<div style="display: flex; justify-content: space-between"><span style="color: #4E5F57">Envío a Luque</span><span>Gs. [COSTO]</span></div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 4px"><strong style="font-size: 16px">Total</strong><span style="font-family: Unbounded, sans-serif; font-weight: 800; font-size: 20px">Gs. [TOTAL]</span></div>
+</div>
+</section>
+
+<section aria-label="Tus datos" style="display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-family: Unbounded, sans-serif; font-weight: 700; font-size: 18px">¿A quién se lo llevamos?</h2>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="nombre" style="font-size: 14px; font-weight: 600">Nombre y apellido</label>
+<input id="nombre" type="text" autocomplete="name" style="height: 50px; border-radius: 16px; border: 2px solid #0E2A1F; padding: 0 16px; font: inherit; font-size: 16px; background: #FFFFFF; color: #0E2A1F">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="tel" style="font-size: 14px; font-weight: 600">WhatsApp</label>
+<input id="tel" type="tel" autocomplete="tel" placeholder="09XX XXX XXX" style="height: 50px; border-radius: 16px; border: 2px solid #0E2A1F; padding: 0 16px; font: inherit; font-size: 16px; background: #FFFFFF; color: #0E2A1F">
+<span style="font-size: 13px; color: #4E5F57">Por acá te confirmamos el pedido antes de enviarlo.</span>
+</div>
+<div style="display: flex; gap: 10px">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<label for="ciudad" style="font-size: 14px; font-weight: 600">Ciudad</label>
+<select id="ciudad" style="height: 50px; border-radius: 16px; border: 2px solid #0E2A1F; padding: 0 12px; font: inherit; font-size: 16px; background: #FFFFFF; color: #0E2A1F">
+<option>Luque</option>
+<option>Asunción</option>
+<option>San Lorenzo</option>
+<option>Fernando de la Mora</option>
+<option>Ciudad del Este</option>
+<option>Encarnación</option>
+</select>
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<label for="barrio" style="font-size: 14px; font-weight: 600">Barrio</label>
+<input id="barrio" type="text" style="height: 50px; border-radius: 16px; border: 2px solid #0E2A1F; padding: 0 16px; font: inherit; font-size: 16px; background: #FFFFFF; color: #0E2A1F; min-width: 0">
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="dir" style="font-size: 14px; font-weight: 600">Dirección y referencia</label>
+<textarea id="dir" rows="3" placeholder="Calle, número y una referencia (casa con portón verde, frente a la despensa…)" style="border-radius: 16px; border: 2px solid #0E2A1F; padding: 12px 16px; font: inherit; font-size: 16px; background: #FFFFFF; color: #0E2A1F; resize: none"></textarea>
+</div>
+</section>
+
+<section aria-label="Forma de pago" style="display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-family: Unbounded, sans-serif; font-weight: 700; font-size: 18px">¿Cómo pagás?</h2>
+<button type="button" aria-pressed="{{codPressed}}" onClick="{{pickCod}}" style="text-align: left; display: flex; gap: 14px; align-items: center; padding: 16px; border-radius: 22px; background: #FFFFFF; border: 3px solid {{codBorder}}; font: inherit; color: #0E2A1F; cursor: pointer">
+<span style="width: 26px; height: 26px; flex: none; border-radius: 50%; border: 2px solid #0E2A1F; display: flex; align-items: center; justify-content: center; box-sizing: border-box"><span style="width: 14px; height: 14px; border-radius: 50%; background: {{codDot}}"></span></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 16px">Pago al recibir</strong><span style="font-size: 14px; color: #4E5F57">Pagás en efectivo cuando te llega</span></span>
+</button>
+<button type="button" aria-pressed="{{trPressed}}" onClick="{{pickTr}}" style="text-align: left; display: flex; gap: 14px; align-items: center; padding: 16px; border-radius: 22px; background: #FFFFFF; border: 3px solid {{trBorder}}; font: inherit; color: #0E2A1F; cursor: pointer">
+<span style="width: 26px; height: 26px; flex: none; border-radius: 50%; border: 2px solid #0E2A1F; display: flex; align-items: center; justify-content: center; box-sizing: border-box"><span style="width: 14px; height: 14px; border-radius: 50%; background: {{trDot}}"></span></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 16px">Transferencia bancaria</strong><span style="font-size: 14px; color: #4E5F57">Transferís y nos mandás el comprobante</span></span>
+</button>
+
+<sc-if value="{{isTr}}" hint-placeholder-val="{{false}}">
+<div style="background: #0E2A1F; color: #F6F1E7; border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<strong style="font-family: Unbounded, sans-serif; font-size: 15px; color: #C8F03C">Datos para transferir</strong>
+<div style="display: grid; grid-template-columns: 90px 1fr; gap: 6px 10px">
+<span style="color: #B9C7BF">Banco</span><span>[TU BANCO]</span>
+<span style="color: #B9C7BF">Cuenta</span><span>[N.º DE CUENTA]</span>
+<span style="color: #B9C7BF">Titular</span><span>[NOMBRE DEL TITULAR]</span>
+<span style="color: #B9C7BF">CI / RUC</span><span>[CI O RUC]</span>
+</div>
+<span style="color: #B9C7BF; line-height: 1.45">Al confirmar te mandamos estos datos por WhatsApp. Enviamos el pedido cuando nos llega el comprobante.</span>
+</div>
+</sc-if>
+<sc-if value="{{isCod}}" hint-placeholder-val="{{true}}">
+<div style="background: #C8F03C; border-radius: 22px; padding: 16px 18px; font-size: 14px; line-height: 1.45">Tené el monto listo en efectivo cuando llegue el repartidor. Antes de salir te confirmamos por WhatsApp.</div>
+</sc-if>
+</section>
+
+<button type="button" onClick="{{confirm}}" style="height: 62px; border-radius: 999px; background: #C8F03C; border: 3px solid #0E2A1F; color: #0E2A1F; font-family: Unbounded, sans-serif; font-weight: 800; font-size: 18px; cursor: pointer">Confirmar pedido</button>
+<span style="font-size: 13px; color: #4E5F57; text-align: center; line-height: 1.45">Sin crear cuenta. Al confirmar aceptás los <a href="#">términos de compra</a>.</span>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isDone}}" hint-placeholder-val="{{false}}">
+<div style="min-height: 1760px; background: #0E2A1F; color: #F6F1E7; padding: 40px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px; position: relative; overflow: hidden">
+<span aria-hidden="true" style="position: absolute; right: -40px; top: 120px; width: 260px; height: 80px; border-radius: 40px; background: #FF5FA2; transform: rotate(-45deg)"></span>
+<span aria-hidden="true" style="position: absolute; right: 120px; top: 250px; width: 110px; height: 36px; border-radius: 18px; background: #C8F03C; transform: rotate(-45deg)"></span>
+<svg aria-hidden="true" width="124.5" height="30.6" viewBox="0 -1008 4789 1178" style="display: block; flex: none"><path d="M281.0 -180.0 219.0 -201.0 521.0 -573.0H757.0L256.0 0.0H52.0V-770.0H281.0ZM358.0 -278.0 533.0 -395.0 772.0 0.0H516.0ZM1090.0 17.0Q979.0 17.0 895.0 -21.0Q811.0 -59.0 764.0 -127.5Q717.0 -196.0 717.0 -286.0Q717.0 -378.0 764.0 -446.5Q811.0 -515.0 895.0 -552.5Q979.0 -590.0 1091.0 -590.0Q1202.0 -590.0 1286.0 -552.5Q1370.0 -515.0 1416.5 -446.5Q1463.0 -378.0 1463.0 -286.0Q1463.0 -196.0 1416.5 -127.5Q1370.0 -59.0 1286.0 -21.0Q1202.0 17.0 1090.0 17.0ZM1091.0 -151.0Q1136.0 -151.0 1167.5 -167.0Q1199.0 -183.0 1215.5 -213.5Q1232.0 -244.0 1232.0 -286.0Q1232.0 -329.0 1215.5 -359.5Q1199.0 -390.0 1167.5 -406.0Q1136.0 -422.0 1091.0 -422.0Q1046.0 -422.0 1014.0 -406.0Q982.0 -390.0 965.5 -359.5Q949.0 -329.0 949.0 -287.0Q949.0 -244.0 965.5 -213.5Q982.0 -183.0 1014.0 -167.0Q1046.0 -151.0 1091.0 -151.0ZM1476.0 -573.0H1705.0L1744.0 -336.0V0.0H1515.0V-371.0ZM1937.0 -590.0Q2017.0 -590.0 2073.0 -557.0Q2129.0 -524.0 2158.5 -463.5Q2188.0 -403.0 2188.0 -322.0V0.0H1959.0V-289.0Q1959.0 -345.0 1932.5 -375.0Q1906.0 -405.0 1857.0 -405.0Q1822.0 -405.0 1796.5 -389.0Q1771.0 -373.0 1757.5 -344.0Q1744.0 -315.0 1744.0 -274.0L1675.0 -310.0Q1688.0 -403.0 1725.5 -465.0Q1763.0 -527.0 1818.0 -558.5Q1873.0 -590.0 1937.0 -590.0ZM2380.0 -590.0Q2460.0 -590.0 2516.5 -557.0Q2573.0 -524.0 2602.5 -463.5Q2632.0 -403.0 2632.0 -322.0V0.0H2403.0V-289.0Q2403.0 -345.0 2376.5 -375.0Q2350.0 -405.0 2301.0 -405.0Q2266.0 -405.0 2240.5 -389.0Q2215.0 -373.0 2201.5 -344.0Q2188.0 -315.0 2188.0 -274.0L2119.0 -310.0Q2132.0 -403.0 2169.5 -465.0Q2207.0 -527.0 2261.5 -558.5Q2316.0 -590.0 2380.0 -590.0ZM2694.0 -573.0H2923.0V-420.0L2914.0 -394.0V-219.0L2923.0 -168.0V165.0H2694.0ZM2853.0 -286.0Q2865.0 -379.0 2905.5 -447.5Q2946.0 -516.0 3010.0 -553.0Q3074.0 -590.0 3155.0 -590.0Q3239.0 -590.0 3302.5 -552.5Q3366.0 -515.0 3401.5 -446.5Q3437.0 -378.0 3437.0 -286.0Q3437.0 -196.0 3401.5 -127.5Q3366.0 -59.0 3302.5 -21.0Q3239.0 17.0 3155.0 17.0Q3073.0 17.0 3009.5 -20.5Q2946.0 -58.0 2906.0 -126.5Q2866.0 -195.0 2853.0 -286.0ZM3206.0 -286.0Q3206.0 -324.0 3190.5 -353.5Q3175.0 -383.0 3147.0 -400.0Q3119.0 -417.0 3083.0 -417.0Q3046.0 -417.0 3012.0 -400.0Q2978.0 -383.0 2952.5 -353.5Q2927.0 -324.0 2915.0 -286.0Q2927.0 -248.0 2952.5 -219.0Q2978.0 -190.0 3012.0 -173.0Q3046.0 -156.0 3083.0 -156.0Q3119.0 -156.0 3147.0 -173.0Q3175.0 -190.0 3190.5 -219.0Q3206.0 -248.0 3206.0 -286.0ZM3452.0 -573.0H3686.0L3720.0 -370.0V0.0H3491.0V-377.0ZM3981.0 -584.0V-389.0Q3949.0 -395.0 3922.5 -397.5Q3896.0 -400.0 3874.0 -400.0Q3833.0 -400.0 3798.0 -384.5Q3763.0 -369.0 3741.5 -331.5Q3720.0 -294.0 3720.0 -228.0L3678.0 -280.0Q3687.0 -342.0 3702.5 -397.5Q3718.0 -453.0 3745.0 -496.5Q3772.0 -540.0 3812.5 -565.0Q3853.0 -590.0 3912.0 -590.0Q3928.0 -590.0 3945.0 -588.5Q3962.0 -587.0 3981.0 -584.0ZM4513.0 0.0 4486.0 -204.0 4514.0 -286.0 4486.0 -367.0 4513.0 -573.0H4751.0L4713.0 -287.0L4751.0 0.0ZM4564.0 -286.0Q4552.0 -195.0 4511.5 -126.5Q4471.0 -58.0 4407.5 -20.5Q4344.0 17.0 4262.0 17.0Q4179.0 17.0 4115.0 -21.0Q4051.0 -59.0 4015.5 -127.5Q3980.0 -196.0 3980.0 -286.0Q3980.0 -378.0 4015.5 -446.5Q4051.0 -515.0 4115.0 -552.5Q4179.0 -590.0 4262.0 -590.0Q4344.0 -590.0 4407.5 -553.0Q4471.0 -516.0 4512.0 -447.5Q4553.0 -379.0 4564.0 -286.0ZM4211.0 -286.0Q4211.0 -248.0 4226.5 -219.0Q4242.0 -190.0 4270.0 -173.0Q4298.0 -156.0 4334.0 -156.0Q4371.0 -156.0 4405.0 -173.0Q4439.0 -190.0 4465.0 -219.0Q4491.0 -248.0 4503.0 -286.0Q4491.0 -324.0 4465.0 -353.5Q4439.0 -383.0 4405.0 -400.0Q4371.0 -417.0 4334.0 -417.0Q4298.0 -417.0 4270.0 -400.0Q4242.0 -383.0 4226.5 -353.5Q4211.0 -324.0 4211.0 -286.0Z" fill="currentColor"></path><path d="M4394.9,-674.3 L4557.5,-836.9 A100.0,100.0 0 0 0 4416.1,-978.3 L4253.5,-815.7 A100.0,100.0 0 0 0 4394.9,-674.3 Z" fill="#C8F03C"></path></svg>
+<h1 style="margin: 220px 0 0; font-family: Unbounded, sans-serif; font-weight: 900; font-size: 48px; line-height: 0.95; letter-spacing: -2.5px; position: relative">¡Listo!<br>Ya es tuyo.</h1>
+<p style="margin: 0; font-size: 18px; line-height: 1.5; color: #B9C7BF; position: relative">Pedido #K-1042. En unos minutos te escribimos por WhatsApp para confirmar la entrega.</p>
+<sc-if value="{{isTr}}" hint-placeholder-val="{{false}}">
+<div style="background: #F6F1E7; color: #0E2A1F; border-radius: 22px; padding: 18px; font-size: 15px; line-height: 1.45">Te mandamos los datos para transferir. Enviá el comprobante por WhatsApp y despachamos tu pedido.</div>
+</sc-if>
+<sc-if value="{{isCod}}" hint-placeholder-val="{{true}}">
+<div style="background: #C8F03C; color: #0E2A1F; border-radius: 22px; padding: 18px; font-size: 15px; line-height: 1.45">Pagás <strong>Gs. [TOTAL]</strong> en efectivo cuando te llegue.</div>
+</sc-if>
+<a href="Main.dc.html" style="margin-top: 8px; display: flex; align-items: center; justify-content: center; height: 58px; border-radius: 999px; border: 2px solid #F6F1E7; color: #F6F1E7; font-weight: 700; font-size: 16px; text-decoration: none">Seguir komprando</a>
+<button type="button" onClick="{{back}}" style="height: 48px; border-radius: 999px; border: 0; background: transparent; color: #C8F03C; font: inherit; font-weight: 700; font-size: 15px; cursor: pointer; text-decoration: underline">Volver al formulario (demo)</button>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1760}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { pay: 'cod', done: false };
+  }
+  renderVals() {
+    const cod = this.state.pay === 'cod';
+    return {
+      isForm: !this.state.done,
+      isDone: this.state.done,
+      isCod: cod,
+      isTr: !cod,
+      codPressed: cod ? 'true' : 'false',
+      trPressed: cod ? 'false' : 'true',
+      codBorder: cod ? '#0E2A1F' : 'transparent',
+      trBorder: cod ? 'transparent' : '#0E2A1F',
+      codDot: cod ? '#FF5FA2' : 'transparent',
+      trDot: cod ? 'transparent' : '#FF5FA2',
+      pickCod: () => this.setState({ pay: 'cod' }),
+      pickTr: () => this.setState({ pay: 'transfer' }),
+      confirm: () => this.setState({ done: true }),
+      back: () => this.setState({ done: false }),
+      items: [
+        { name: 'Freidora eléctrica', price: '420.000' },
+        { name: 'Luz LED para termo de tereré', price: '65.000' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

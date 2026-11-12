@@ -1,0 +1,37 @@
+KOMPRÁ · COLORES DE MARCA
+
+CMYK aproximado: pedile siempre una prueba de color a la imprenta.
+
+YERBA
+  HEX   #0E2A1F
+  RGB   14, 42, 31
+  CMYK  67 / 0 / 26 / 84
+  Uso   Fondos fuertes, textos, botones
+
+TERERÉ
+  HEX   #C8F03C
+  RGB   200, 240, 60
+  CMYK  17 / 0 / 75 / 6
+  Uso   Acento principal, botones, stickers
+
+LAPACHO
+  HEX   #FF5FA2
+  RGB   255, 95, 162
+  CMYK  0 / 63 / 36 / 0
+  Uso   Segundo acento, promos, la tilde en fondo claro
+
+HUESO
+  HEX   #F6F1E7
+  RGB   246, 241, 231
+  CMYK  0 / 2 / 6 / 4
+  Uso   Fondo general
+
+ARENA
+  HEX   #ECE5D5
+  RGB   236, 229, 213
+  CMYK  0 / 3 / 10 / 7
+  Uso   Fondo de las fotos de producto, tarjetas
+
+Texto secundario sobre Hueso: #4E5F57
+
+Proporción sugerida: 50 % Hueso o Arena, 30 % Yerba, 15 % Tereré, 5 % Lapacho.

@@ -1,0 +1,21 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-11-12T19:10:00Z"},
+  "title": "Komprá — Branding y tienda online",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Marca.dc.html": {"x": 0, "y": 0, "w": 1440, "h": 1240, "title": "Marca Komprá"},
+    "Aplicaciones.dc.html": {"x": 1520, "y": 0, "w": 1440, "h": 1240, "title": "Aplicaciones de marca"},
+    "Redes.dc.html": {"x": 3040, "y": 0, "w": 1440, "h": 1040, "title": "Perfil y portada (Instagram y Facebook)"},
+    "Main.dc.html": {"x": 0, "y": 1720, "w": 1440, "h": 3400, "title": "Home (desktop)", "expand": "fill"},
+    "Producto.dc.html": {"x": 1520, "y": 1720, "w": 1440, "h": 2200, "title": "Página de producto (desktop)", "expand": "fill"},
+    "Checkout.dc.html": {"x": 3040, "y": 1720, "w": 390, "h": 1760, "title": "Checkout (celular)", "is_interactive": true}
+  },
+  "order": ["Main.dc.html", "Marca.dc.html", "Aplicaciones.dc.html", "Redes.dc.html", "Producto.dc.html", "Checkout.dc.html"],
+  "notes": {
+    "titulo": {"x": 0, "y": -300, "text": "Komprá — Branding", "kind": "title1", "maxW": 4480},
+    "tienda": {"x": 0, "y": 1420, "text": "Komprá — Tienda online", "kind": "title1", "maxW": 3430}
+  },
+  "designSystems": []
+}

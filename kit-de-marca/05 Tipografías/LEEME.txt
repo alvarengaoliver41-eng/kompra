@@ -1,0 +1,16 @@
+TIPOGRAFÍAS DE KOMPRÁ
+
+Unbounded: títulos, precios, botones y stickers. Pesos: SemiBold, Bold, ExtraBold y Black.
+Instrument Sans: textos, descripciones y datos. Pesos: Regular, Medium, SemiBold y Bold.
+
+Para instalarlas: doble clic en cada archivo .ttf y después "Instalar".
+En Canva: Marca > Fuentes > Subir fuente.
+
+Estos archivos traen los caracteres del español (á, é, í, ó, ú, ñ, ü, ¿, ¡).
+Si necesitás letras del guaraní como ẽ, ĩ, ũ o ỹ, bajá las versiones completas gratis en
+fonts.google.com/specimen/Unbounded y fonts.google.com/specimen/Instrument+Sans
+
+Ambas son gratuitas y de uso comercial libre (licencia SIL Open Font License, en la carpeta Licencias).
+
+IMPORTANTE: el logo NO se escribe con la fuente. Usá siempre los archivos de la carpeta 01 Logo,
+porque la tilde del logo está dibujada a mano y no es la tilde de la tipografía.
